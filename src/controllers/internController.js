@@ -10,6 +10,7 @@ let mobileRegex = /^[6-9]\d{9}$/
 
 //=================route handler for create intern================
 let createIntern = async function (req, res) {
+    res.setHeader("Access-Control-Allow-Origin" , "*");
     try {
         let data = req.body;
         let { name, email, mobile, collegeName } = data;
@@ -74,6 +75,7 @@ let createIntern = async function (req, res) {
 
 //==============route handler for get all interns==================
 const getdata = async (req, res) => {
+    res.setHeader("Access-Control-Allow-Origin" , "*");
     try {
         const data = req.query.collegeName
         if (Object.keys(req.query).length != 0) {
