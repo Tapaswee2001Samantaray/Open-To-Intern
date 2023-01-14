@@ -7,9 +7,9 @@ router.post("/functionup/colleges", collegeController.createCollege);
 router.post("/functionup/interns", interController.createIntern);
 router.get("/functionup/collegeDetails", interController.getdata);
 
-// router.all("/*", function (req, res) {
-//     res.status(400).send({ status: false, message: "Please Input valid URL." });
-// });
+router.all("/*", function (req, res) {
+    res.status(400).send({ status: false, message: "Please Input valid URL." });
+});
 
 
 module.exports = router;
